@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body ng-app='myapp' ng-controller='mycontrol'>
+<div ng-click="nameClick()">{{name}}</div>
+<div ng-click="click()">click</div>
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script >
+	var app = angular.module("myapp", []);
+	app.controller("mycontrol", function ($scope) {
+		$scope.name = "你猜";
+		 $scope.click = function () {
+		 	 /* body... */ 
+		 	 $scope.name += " + 1";
+		 };
+		 $scope.nameClick = function () {
+		 	 /* body... */ 
+		 	 $scope.name = "复原";
+		 };
+	});
+</script>
+</body>
+</html>
